@@ -130,7 +130,7 @@ export default function Projects() {
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
 
   return (
-    <section id="projects" className="py-24 px-6 relative" ref={ref}>
+    <section id="projects" className="py-32 px-6 lg:px-16 relative" ref={ref}>
       <div
         className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full blur-3xl opacity-10 pointer-events-none"
         style={{ background: 'radial-gradient(circle, #7c3aed, transparent)' }}
@@ -141,7 +141,7 @@ export default function Projects() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
           <p className="text-purple-400 text-sm font-mono tracking-widest uppercase mb-3">What I've built</p>
           <h2 className="text-4xl md:text-5xl font-black" style={{ fontFamily: 'Outfit, sans-serif' }}>
@@ -152,7 +152,7 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-7">
+        <div className="grid lg:grid-cols-2 gap-12">
           {projects.map((project, i) => (
             <motion.div
               key={project.id}
@@ -164,7 +164,7 @@ export default function Projects() {
             >
               {/* Card header */}
               <div
-                className="relative h-48 flex items-center justify-center overflow-hidden"
+                className="relative h-64 flex items-center justify-center overflow-hidden"
                 style={{
                   background: `linear-gradient(135deg, ${project.color}20, ${project.color}05)`,
                 }}
@@ -193,15 +193,17 @@ export default function Projects() {
               </div>
 
               {/* Card body */}
-              <div className="p-8">
-                <h3 className="text-xl font-black text-white mb-1" style={{ fontFamily: 'Outfit, sans-serif' }}>
-                  {project.title}
-                </h3>
-                <p style={{ color: project.color }} className="text-sm font-medium mb-3">{project.subtitle}</p>
-                <p className="text-gray-400 text-sm leading-7 mb-6">{project.desc}</p>
+              <div className="p-10 space-y-6">
+                <div>
+                  <h3 className="text-2xl font-black text-white mb-2" style={{ fontFamily: 'Outfit, sans-serif' }}>
+                    {project.title}
+                  </h3>
+                  <p style={{ color: project.color }} className="text-sm font-semibold">{project.subtitle}</p>
+                </div>
+                <p className="text-gray-400 text-sm md:text-base leading-loose">{project.desc}</p>
 
                 {/* Highlights */}
-                <div className="flex flex-wrap gap-2 mb-5">
+                <div className="flex flex-wrap gap-3">
                   {project.highlights.map((h) => (
                     <span
                       key={h}
@@ -214,7 +216,7 @@ export default function Projects() {
                 </div>
 
                 {/* Tech tags */}
-                <div className="flex flex-wrap gap-1.5 mb-5">
+                <div className="flex flex-wrap gap-2">
                   {project.tech.slice(0, 5).map((t) => (
                     <span
                       key={t}
@@ -232,7 +234,7 @@ export default function Projects() {
                 </div>
 
                 {/* Actions */}
-                <div className="flex items-center gap-3">
+                <div className="flex flex-wrap items-center gap-4 pt-4">
                   <a
                     href={project.demo}
                     className="btn-glow flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold text-white"

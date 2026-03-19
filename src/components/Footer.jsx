@@ -7,14 +7,14 @@ export default function Footer() {
 
   return (
     <footer
-      className="py-10 px-6 relative"
+      className="py-16 px-6 lg:px-16 relative"
       style={{
         borderTop: '1px solid rgba(139,92,246,0.15)',
         background: 'linear-gradient(to top, rgba(109,40,217,0.05), transparent)',
       }}
     >
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo */}
           <div className="flex items-center gap-2">
             <div

@@ -54,7 +54,7 @@ export default function Experience() {
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
 
   return (
-    <section id="experience" className="py-24 px-6 relative" ref={ref}>
+    <section id="experience" className="py-32 px-6 lg:px-16 relative" ref={ref}>
       <div
         className="absolute top-0 right-0 w-72 h-72 rounded-full blur-3xl opacity-8 pointer-events-none"
         style={{ background: 'radial-gradient(circle, #8b5cf6, transparent)' }}
@@ -65,7 +65,7 @@ export default function Experience() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
           <p className="text-purple-400 text-sm font-mono tracking-widest uppercase mb-3">My journey</p>
           <h2 className="text-4xl md:text-5xl font-black" style={{ fontFamily: 'Outfit, sans-serif' }}>
@@ -88,7 +88,7 @@ export default function Experience() {
                 initial={{ opacity: 0, x: isLeft ? -40 : 40 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.7, delay: i * 0.15 }}
-                className={`relative flex items-start gap-6 mb-16 ${
+                className={`relative flex items-start gap-8 mb-24 ${
                   isLeft ? 'md:flex-row' : 'md:flex-row-reverse'
                 } flex-row pl-14 pr-4 md:pl-0 md:pr-0`}
               >
@@ -105,10 +105,10 @@ export default function Experience() {
                 {/* Card */}
                 <div className={`w-full md:w-[46%] ${isLeft ? 'md:mr-auto' : 'md:ml-auto'}`}>
                   <div
-                    className="glass rounded-2xl p-6 hover:border-purple-500/40 transition-all duration-300 group project-card"
+                    className="glass rounded-2xl p-8 hover:border-purple-500/40 transition-all duration-300 group project-card"
                     style={{ border: '1px solid rgba(139,92,246,0.15)' }}
                   >
-                    <div className="flex items-start gap-3 mb-3">
+                    <div className="flex items-start gap-4 mb-4">
                       <div
                         className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
                         style={{ background: `${item.color}20`, color: item.color }}
@@ -121,12 +121,12 @@ export default function Experience() {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-1.5 mb-4">
+                    <div className="flex items-center gap-2 mb-6">
                       <Calendar size={12} className="text-gray-500" />
                       <span className="text-gray-500 text-xs">{item.period}</span>
                     </div>
 
-                    <p className="text-gray-400 text-sm leading-loose mb-5">{item.desc}</p>
+                    <p className="text-gray-400 text-sm leading-loose mb-6">{item.desc}</p>
 
                     <div className="flex flex-wrap gap-2">
                       {item.tags.map((tag) => (

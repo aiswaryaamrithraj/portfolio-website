@@ -20,7 +20,7 @@ export default function ResumePage() {
         </a>
         <a
           href="/resume.pdf"
-          download
+          download="Aiswarya_Resume.pdf"
           className="btn-glow flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold text-white"
           style={{ background: 'linear-gradient(135deg, #8b5cf6, #a855f7)', boxShadow: '0 0 20px rgba(139,92,246,0.4)' }}
         >

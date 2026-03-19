@@ -94,7 +94,7 @@ export default function Skills() {
   const displayed = active === 'all' ? categories : categories.filter(c => c.id === active);
 
   return (
-    <section id="skills" className="py-24 px-6 relative" ref={ref}>
+    <section id="skills" className="py-32 px-6 lg:px-16 relative" ref={ref}>
       {/* Background accent */}
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 rounded-full blur-3xl opacity-10 pointer-events-none"
@@ -106,7 +106,7 @@ export default function Skills() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
           <p className="text-purple-400 text-sm font-mono tracking-widest uppercase mb-3">What I work with</p>
           <h2 className="text-4xl md:text-5xl font-black" style={{ fontFamily: 'Outfit, sans-serif' }}>
@@ -119,7 +119,7 @@ export default function Skills() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-3 mb-10"
+          className="flex flex-wrap justify-center gap-4 mb-14"
         >
           {skillCategories.map((cat) => (
             <button
@@ -151,7 +151,7 @@ export default function Skills() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-5"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {displayed.map((cat, ci) => (
               <motion.div
@@ -159,7 +159,7 @@ export default function Skills() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: ci * 0.1 }}
-                className="glass rounded-2xl p-6 hover:border-purple-500/40 transition-all duration-300 group"
+                className="glass rounded-2xl p-8 hover:border-purple-500/40 transition-all duration-300 group"
                 style={{ border: '1px solid rgba(139,92,246,0.15)' }}
               >
                 <div className="flex items-center gap-3 mb-5">
@@ -189,7 +189,7 @@ export default function Skills() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.6 }}
-          className="mt-20 text-center"
+          className="mt-32 text-center"
         >
           <p className="text-gray-500 text-sm mb-5">Also familiar with</p>
           <div className="flex flex-wrap justify-center gap-3">

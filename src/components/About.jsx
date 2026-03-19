@@ -48,7 +48,7 @@ export default function About() {
   const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
 
   return (
-    <section id="about" className="py-24 px-4 md:px-6" ref={ref}>
+    <section id="about" className="py-32 px-6 lg:px-16" ref={ref}>
       <div className="max-w-5xl mx-auto">
 
         {/* Header */}
@@ -56,7 +56,7 @@ export default function About() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
           <p className="text-purple-400 text-xs font-mono uppercase tracking-widest mb-2">
             Get to know me
@@ -67,7 +67,7 @@ export default function About() {
         </motion.div>
 
         {/* Main Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
           {/* Avatar */}
           <motion.div
@@ -86,8 +86,8 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="max-w-lg mx-auto lg:mx-0"
           >
-            <div className="space-y-6">
-              <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+            <div className="space-y-8">
+              <p className="text-gray-300 text-base md:text-lg leading-loose">
                 Hey, I'm <span className="text-purple-400 font-semibold">Aiswarya</span>, a 3rd-year CSE student at LPU.
               </p>
 
@@ -100,7 +100,7 @@ export default function About() {
               </p>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-2 pt-2">
+              <div className="flex flex-wrap gap-4 pt-4">
                 {['Backend', 'API', 'UI/UX', 'AI', 'Cloud'].map((tag) => (
                   <span
                     key={tag}
@@ -123,7 +123,7 @@ export default function About() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-14"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mt-24"
         >
           {stats.map((s, i) => (
             <motion.div
@@ -131,7 +131,7 @@ export default function About() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ delay: 0.6 + i * 0.1 }}
-              className="rounded-xl p-5 text-center backdrop-blur-md"
+              className="rounded-2xl p-8 text-center backdrop-blur-md"
               style={{ border: '1px solid rgba(139,92,246,0.2)' }}
             >
               <div className="mb-2 text-purple-400 flex justify-center">

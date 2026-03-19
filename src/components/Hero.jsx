@@ -143,7 +143,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 text-sm"
+          className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass mb-10 text-sm"
           style={{ border: '1px solid rgba(139,92,246,0.4)' }}
         >
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
@@ -156,7 +156,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="hero-title font-black mb-4 leading-tight"
+          className="hero-title font-black mb-8 leading-tight"
           style={{
             fontFamily: 'Outfit, sans-serif',
             fontSize: 'clamp(2.5rem, 7vw, 5.5rem)',
@@ -171,7 +171,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="mb-6 text-2xl md:text-3xl font-semibold text-gray-300"
+          className="mb-10 text-2xl md:text-3xl font-semibold text-gray-300"
           style={{ fontFamily: 'Outfit, sans-serif' }}
         >
           <TypeAnimation
@@ -194,7 +194,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
-          className="text-gray-400 text-lg max-w-2xl mx-auto mb-12 leading-loose"
+          className="text-gray-400 text-lg max-w-2xl mx-auto mb-16 leading-loose"
         >
           3rd-year CSE student passionate about backend systems, scalable APIs, and data-driven applications.
           Proficient in Java, Python, and JavaScript — building the future, one commit at a time.
@@ -205,7 +205,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0 }}
-          className="flex flex-wrap items-center justify-center gap-5"
+          className="flex flex-wrap items-center justify-center gap-8"
         >
           <Link
             to="/resume"
@@ -221,7 +221,7 @@ export default function Hero() {
 
           <a
             href="/resume.pdf"
-            download
+            download="Aiswarya_Resume.pdf"
             className="btn-glow flex items-center gap-2 px-8 py-4 rounded-full font-semibold"
             style={{
               background: 'transparent',
@@ -251,7 +251,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          className="mt-20 flex flex-col items-center gap-3"
+          className="mt-32 flex flex-col items-center gap-4"
         >
           <span className="text-gray-600 text-xs uppercase tracking-widest">Scroll to explore</span>
           <motion.div
